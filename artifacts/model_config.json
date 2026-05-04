@@ -1,0 +1,29 @@
+{
+  "target": "AP Ratio",
+  "feature_cols": [
+    "season_order",
+    "transplant_month",
+    "growth_start_month",
+    "harvest_start_month",
+    "temp_diurnal_range",
+    "temp_mean",
+    "gdd_proxy",
+    "svp_proxy",
+    "vpd_proxy",
+    "humidity_mid",
+    "season_sin",
+    "season_cos",
+    "area_log",
+    "area_x_diurnal",
+    "temp_x_humidity",
+    "Season_enc",
+    "Crop Name_enc",
+    "Transplant_enc",
+    "Growth_enc",
+    "Harvest_enc",
+    "District_enc"
+  ],
+  "q_alpha_90": 4.097180337297749,
+  "model_type": "CatBoostRegressor",
+  "split": "Random"
+}
