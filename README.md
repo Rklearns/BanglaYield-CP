@@ -51,7 +51,7 @@ BanglaYield-CP/
 
 The raw dataset used in this repository is:
 
-- [dataset/SPAS-Dataset-BD.csv](/Users/rishitkar/Desktop/BanglaYield-CP/dataset/SPAS-Dataset-BD.csv)
+- [dataset/SPAS-Dataset-BD.csv](dataset/SPAS-Dataset-BD.csv)
 - SPAS-Dataset-BD (Mendeley Data): [https://data.mendeley.com/datasets/cphdw4z5kw/2](https://data.mendeley.com/datasets/cphdw4z5kw/2)
 
 For the subset used in this repository, the available columns are:
@@ -99,13 +99,13 @@ The repository follows a clear three-stage data lineage:
 
 ### 1. Raw dataset
 
-- [dataset/SPAS-Dataset-BD.csv](/Users/rishitkar/Desktop/BanglaYield-CP/dataset/SPAS-Dataset-BD.csv)
+- [dataset/SPAS-Dataset-BD.csv](dataset/SPAS-Dataset-BD.csv)
 
 This is the original source table containing raw categorical month strings, production values, and the original humidity column naming.
 
 ### 2. Cleaned / preprocessed dataset
 
-- [dataset/preprocessed_data.csv](/Users/rishitkar/Desktop/BanglaYield-CP/dataset/preprocessed_data.csv)
+- [dataset/preprocessed_data.csv](dataset/preprocessed_data.csv)
 
 This file is the cleaned modeling base table. The preprocessing notebook removes the `Production` field to avoid direct leakage into the target pipeline and standardizes calendar strings such as transplant, growth, and harvest month expressions.
 
@@ -119,7 +119,7 @@ Key changes visible in this artifact:
 
 ### 3. Engineered feature dataset
 
-- [dataset/crop_engineered.csv](/Users/rishitkar/Desktop/BanglaYield-CP/dataset/crop_engineered.csv)
+- [dataset/crop_engineered.csv](dataset/crop_engineered.csv)
 
 This is the feature-ready matrix exported by the main modeling notebook and used for regression experiments. It contains encoded and derived variables designed for seasonality-aware machine learning.
 
@@ -223,7 +223,7 @@ Uncertainty metrics for conformal or Gaussian intervals:
 
 ### 1. Preprocessing
 
-The preprocessing logic is primarily documented in [data_handling.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/data_handling.ipynb). The notebook performs data inspection and normalization steps including:
+The preprocessing logic is primarily documented in [data_handling.ipynb](data_handling.ipynb). The notebook performs data inspection and normalization steps including:
 
 - conversion of `AP Ratio` to numeric with coercion of invalid values,
 - removal of rows with resulting missing targets,
@@ -235,8 +235,8 @@ The preprocessing logic is primarily documented in [data_handling.ipynb](/Users/
 
 The main feature-engineering workflow is implemented in:
 
-- [models/crop_ap_ratio_prediction.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/crop_ap_ratio_prediction.ipynb)
-- [models/regression_crop_pred.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/regression_crop_pred.ipynb)
+- [models/crop_ap_ratio_prediction.ipynb](models/crop_ap_ratio_prediction.ipynb)
+- [models/regression_crop_pred.ipynb](models/regression_crop_pred.ipynb)
 
 The engineered features fall into six groups.
 
@@ -351,12 +351,12 @@ The notebooks indicate experiments with the following regressors:
 
 CatBoost appears in two roles:
 
-- as an initial standalone baseline in [models/catboost_apply_init.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/catboost_apply_init.ipynb),
+- as an initial standalone baseline in [models/catboost_apply_init.ipynb](models/catboost_apply_init.ipynb),
 - and as an integrated comparator inside the main model-comparison notebook.
 
 ## Notebooks
 
-### [data_handling.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/data_handling.ipynb)
+### [data_handling.ipynb](data_handling.ipynb)
 
 Purpose:
 
@@ -364,7 +364,7 @@ Purpose:
 - cleaning and normalization of month/calendar fields,
 - target validation and row removal.
 
-### [models/catboost_apply_init.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/catboost_apply_init.ipynb)
+### [models/catboost_apply_init.ipynb](models/catboost_apply_init.ipynb)
 
 Purpose:
 
@@ -381,7 +381,7 @@ Saved notebook output in the committed file shows:
 - stronger performance after excluding zero-yield target cases,
 - top CatBoost drivers including `Area`, `Max Temp`, `Avg Temp`, and `District`.
 
-### [models/regression_crop_pred.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/regression_crop_pred.ipynb)
+### [models/regression_crop_pred.ipynb](models/regression_crop_pred.ipynb)
 
 Purpose:
 
@@ -393,7 +393,7 @@ Purpose:
 
 This notebook appears to be an earlier comparative modeling pipeline.
 
-### [models/crop_ap_ratio_prediction.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/crop_ap_ratio_prediction.ipynb)
+### [models/crop_ap_ratio_prediction.ipynb](models/crop_ap_ratio_prediction.ipynb)
 
 Purpose:
 
@@ -407,14 +407,14 @@ This is the most complete notebook in the repository and should be treated as th
 
 ## Generated Figures
 
-The repository already includes exported visual artifacts in [plots](/Users/rishitkar/Desktop/BanglaYield-CP/plots):
+The repository already includes exported visual artifacts in [plots](plots):
 
-- [plots/model_comparison.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/model_comparison.png)
-- [plots/heatmaps.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/heatmaps.png)
-- [plots/pred_vs_actual.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/pred_vs_actual.png)
-- [plots/feature_importance.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/feature_importance.png)
-- [plots/residuals.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/residuals.png)
-- [plots/gen_gap.png](/Users/rishitkar/Desktop/BanglaYield-CP/plots/gen_gap.png)
+- [plots/model_comparison.png](plots/model_comparison.png)
+- [plots/heatmaps.png](plots/heatmaps.png)
+- [plots/pred_vs_actual.png](plots/pred_vs_actual.png)
+- [plots/feature_importance.png](plots/feature_importance.png)
+- [plots/residuals.png](plots/residuals.png)
+- [plots/gen_gap.png](plots/gen_gap.png)
 
 Collectively, these plots document:
 
@@ -431,7 +431,7 @@ Collectively, these plots document:
 
 The repository includes:
 
-- [requirements.txt](/Users/rishitkar/Desktop/BanglaYield-CP/requirements.txt)
+- [requirements.txt](requirements.txt)
 
 The listed stack includes:
 
@@ -459,18 +459,18 @@ Note: the committed `requirements.txt` is encoded as UTF-16 LE. If your environm
 
 For a clean rerun of the workflow, use the notebooks in the following order:
 
-1. [data_handling.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/data_handling.ipynb)
-2. [models/catboost_apply_init.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/catboost_apply_init.ipynb)
-3. [models/regression_crop_pred.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/regression_crop_pred.ipynb)
-4. [models/crop_ap_ratio_prediction.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/crop_ap_ratio_prediction.ipynb)
+1. [data_handling.ipynb](data_handling.ipynb)
+2. [models/catboost_apply_init.ipynb](models/catboost_apply_init.ipynb)
+3. [models/regression_crop_pred.ipynb](models/regression_crop_pred.ipynb)
+4. [models/crop_ap_ratio_prediction.ipynb](models/crop_ap_ratio_prediction.ipynb)
 
 If only one notebook is to be used for the main experiment, prefer:
 
-- [models/crop_ap_ratio_prediction.ipynb](/Users/rishitkar/Desktop/BanglaYield-CP/models/crop_ap_ratio_prediction.ipynb)
+- [models/crop_ap_ratio_prediction.ipynb](models/crop_ap_ratio_prediction.ipynb)
 
 ## License
 
-The repository includes a [LICENSE](/Users/rishitkar/Desktop/BanglaYield-CP/LICENSE) file. Review that file for the governing usage terms.
+The repository includes a [LICENSE](LICENSE) file. Review that file for the governing usage terms.
 
 ## Citation Guidance
 
